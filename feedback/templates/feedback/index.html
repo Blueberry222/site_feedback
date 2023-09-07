@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lista de Feedbacks</title>
+</head>
+<body>
+    {% if feedback_list %}
+        <ul>
+        {% for feedback in feedback_list %}
+            <li><a href="/feedback/{{ feedback.id }}/">{{ feedback.titulo_feedback }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum feedback disponível.</p>
+    {% endif %}
+</body>
+
+</html>
